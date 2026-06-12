@@ -1,0 +1,13 @@
+{
+  "builds": [
+    {
+      "src": "backend/main.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "rewrites": [
+    { "source": "/", "destination": "/frontend/index.html" },
+    { "source": "/js/(.*)", "destination": "/frontend/js/$1" },
+    { "source": "/(.*)", "destination": "/backend/main.py" }
+  ]
+}
