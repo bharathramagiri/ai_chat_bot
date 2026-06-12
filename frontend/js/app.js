@@ -505,7 +505,7 @@ async function handleMessageSubmit(e) {
     const aiContentBox = appendBubble('assistant', '<span class="animate-pulse text-zinc-500 font-medium tracking-wide">Thinking...</span>');
 
     try {
-        const response = await fetch('http://127.0.0.1:8000/api/chat', {
+        const response = await fetch('/api/chat', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ messages: currentChat.messages, is_image_request: isImgRequest })
