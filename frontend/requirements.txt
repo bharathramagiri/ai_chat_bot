@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+openai
+replicate
+python-dotenv
+httpx
+pydantic
